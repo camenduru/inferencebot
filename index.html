@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebSocket Image Viewer</title>
+</head>
+<body>
+    <div id="messages"></div>
+    <img id="image">
+    <script>
+        const socket = new WebSocket("ws://127.0.0.1/ws");
+        socket.binaryType = "arraybuffer";
+
+        socket.onmessage = (event) => {
+            const image = document.getElementById("image");
+            const messagesDiv = document.getElementById("messages");
+
+            if (event.data instanceof ArrayBuffer) {
+                // Handle image data
+                const arrayBuffer = event.data;
+                const blob = new Blob([arrayBuffer], { type: "image/jpeg" });
+                const imageUrl = URL.createObjectURL(blob);
+                image.src = imageUrl;
+            } else {
+                // Handle text message
+                messagesDiv.textContent = event.data;
+            }
+        };
+    </script>
+</body>
+</html>

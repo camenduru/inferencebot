@@ -71,7 +71,7 @@ func readFile(path string) ([]byte, error) {
 
 func main() {
 	messageChannel := make(chan string)
-	go taskTwitch("username", "channel", "oauth:", messageChannel)
+	go taskTwitch("username_sed", "channel_sed", "oauth_sed", messageChannel)
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 		http.ServeFile(w, r, "index.html")
 	})

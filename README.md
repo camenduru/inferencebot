@@ -5,9 +5,12 @@
 ## 🚦WIP🚦
 
 ### 📋 Tutorial
-1) Twitch Chat OAuth Password Generator: https://twitchapps.com/tmi
-2) Twitch Stream Key
+1) Get Twitch Chat OAuth Password: https://twitchapps.com/tmi
+2) Get Ingest Endpoint: https://help.twitch.tv/s/twitch-ingest-recommendation
+3) Get Twitch Stream Key `rtmp://cdg02.contribute.live-video.net/app/{stream_key}`
 ![Screenshot 2023-12-24 052022](https://github.com/camenduru/inferencebot/assets/54370274/34dddcf7-6c90-4293-9676-ac5cea290535)
+- rtmp_link for twitch.tv `rtmp://iad05.contribute.live-video.net/app/live_10074992_wDSHi3cNd3m4kfhA`
+- rtmp_link for restream.io `rtmp://live.restream.io/live/re_5252610_1f09b8941160`
 
 ### 🦒 Colab
 

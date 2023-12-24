@@ -4,6 +4,11 @@
 
 ## 🚦WIP🚦
 
+### 📋 Tutorial
+1) Twitch Chat OAuth Password Generator: https://twitchapps.com/tmi
+2) Twitch Stream Key
+![Screenshot 2023-12-24 052022](https://github.com/camenduru/inferencebot/assets/54370274/34dddcf7-6c90-4293-9676-ac5cea290535)
+
 ### 🧬 Code
 https://github.com/cumulo-autumn/StreamDiffusion
 

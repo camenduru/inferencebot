@@ -25,6 +25,7 @@ https://github.com/golang/go <br />
 https://go.dev/dl <br />
 https://github.com/gempir/go-twitch-irc <br />
 https://github.com/gorilla/websocket <br />
+https://github.com/faiface/beep <br />
 https://bitbucket.org/chromiumembedded/cef <br />
 https://cef-builds.spotifycdn.com/index.html <br />
 https://gitlab.freedesktop.org/gstreamer <br />

@@ -13,7 +13,9 @@
 
 | Colab | Info
 | --- | --- |
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/camenduru/inferencebot/blob/main/inferencebot_colab.ipynb) | inferencebot_colab
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/camenduru/inferencebot/blob/main/inferencebot_playground_v2_colab.ipynb) | inferencebot_playground_v2_colab
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/camenduru/inferencebot/blob/main/inferencebot_stream_diffusion_colab.ipynb) | inferencebot_stream_diffusion_colab
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/camenduru/inferencebot/blob/main/inferencebot_sdxl_turbo_colab.ipynb) | inferencebot_sdxl_turbo_colab
 
 
 ### 🧬 Code

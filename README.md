@@ -21,3 +21,6 @@ https://github.com/cumulo-autumn/StreamDiffusion
 
 ### 🖼 Output
 https://github.com/camenduru/inferencebot/assets/54370274/72ee9ae6-a5c4-4405-916b-c64be449713c
+
+### 🏢 Sponsor
+https://modelslab.com

@@ -9,6 +9,13 @@
 2) Twitch Stream Key
 ![Screenshot 2023-12-24 052022](https://github.com/camenduru/inferencebot/assets/54370274/34dddcf7-6c90-4293-9676-ac5cea290535)
 
+### 🦒 Colab
+
+| Colab | Info
+| --- | --- |
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/camenduru/inferencebot/blob/main/inferencebot_colab.ipynb) | inferencebot_colab
+
+
 ### 🧬 Code
 https://github.com/cumulo-autumn/StreamDiffusion
 

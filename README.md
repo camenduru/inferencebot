@@ -18,9 +18,13 @@
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/camenduru/inferencebot/blob/main/inferencebot_sdxl_turbo_colab.ipynb) | inferencebot_sdxl_turbo_colab
 
 ### 🧬 Code
-https://cef-builds.spotifycdn.com/index.html <br />
+https://github.com/golang/go <br />
 https://go.dev/dl <br />
+https://bitbucket.org/chromiumembedded/cef <br />
+https://cef-builds.spotifycdn.com/index.html <br />
+https://gitlab.freedesktop.org/gstreamer <br />
 https://gstreamer.freedesktop.org/download <br />
+https://github.com/centricular/gstcefsrc <br />
 https://github.com/huggingface/diffusers <br />
 https://github.com/cumulo-autumn/StreamDiffusion <br />
 

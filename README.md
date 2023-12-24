@@ -17,9 +17,11 @@
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/camenduru/inferencebot/blob/main/inferencebot_stream_diffusion_colab.ipynb) | inferencebot_stream_diffusion_colab
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/camenduru/inferencebot/blob/main/inferencebot_sdxl_turbo_colab.ipynb) | inferencebot_sdxl_turbo_colab
 
-
 ### 🧬 Code
-https://github.com/cumulo-autumn/StreamDiffusion
+https://cef-builds.spotifycdn.com/index.html <br />
+https://go.dev/dl <br />
+https://gstreamer.freedesktop.org/download <br />
+https://github.com/cumulo-autumn/StreamDiffusion <br />
 
 ### 🖼 Output
 https://github.com/camenduru/inferencebot/assets/54370274/72ee9ae6-a5c4-4405-916b-c64be449713c

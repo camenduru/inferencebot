@@ -21,6 +21,7 @@
 https://cef-builds.spotifycdn.com/index.html <br />
 https://go.dev/dl <br />
 https://gstreamer.freedesktop.org/download <br />
+https://github.com/huggingface/diffusers <br />
 https://github.com/cumulo-autumn/StreamDiffusion <br />
 
 ### 🖼 Output

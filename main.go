@@ -22,7 +22,7 @@ func taskTwitch(clientUsername, channel, oauthToken string, messageChannel chan<
 	client.OnPrivateMessage(func(message twitch.PrivateMessage) {
 		text := message.Message
 		// client.Say(channel, fmt.Sprintf("/me %s \n", text))
-    	pythonCmd := fmt.Sprintf("python -c \"from gradio_client import Client; client = Client('http://127.0.0.1:7860'); result = client.predict('%s', fn_index=0); print(result)\"", text)
+    		pythonCmd := fmt.Sprintf("python -c \"from gradio_client import Client; client = Client('http://127.0.0.1:7860'); result = client.predict('%s', fn_index=0); print(result)\"", text)
 		cmd := exec.Command("sh", "-c", pythonCmd)
 		cmd.Stdout = os.Stdout
 		cmd.Stderr = os.Stderr

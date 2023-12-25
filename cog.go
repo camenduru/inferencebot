@@ -23,7 +23,7 @@ func taskTwitch(clientUsername, channel, oauthToken string, messageChannel chan<
 	client.OnPrivateMessage(func(message twitch.PrivateMessage) {
 		text := message.Message
 		var stdoutBuffer bytes.Buffer
-    	pythonCmd := fmt.Sprintf("python -c \"import replicate; print(replicate.run('playgroundai/playground-v2-1024px-aesthetic:42fe626e41cc811eaf02c94b892774839268ce1994ea778eba97103fe1ef51b8', input={'prompt': '%s'})[0])\"", text)
+    	pythonCmd := fmt.Sprintf("python -c \"import replicate; print(replicate.run('playgroundai/playground-v2-1024px-aesthetic:42fe626e41cc811eaf02c94b892774839268ce1994ea778eba97103fe1ef51b8', input={'prompt': '%s', 'num_inference_steps': 25})[0])\"", text)
 		cmd := exec.Command("sh", "-c", pythonCmd)
 		cmd.Stdout = &stdoutBuffer
 		cmd.Stderr = os.Stderr

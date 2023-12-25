@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebSocket Image Viewer</title>
+</head>
+<body>
+    <center><img id="image"></center>
+    <script>
+        const socket = new WebSocket("ws://127.0.0.1/ws");
+        socket.binaryType = "arraybuffer";
+
+        socket.onmessage = (event) => {
+            const image = document.getElementById("image");
+            image.src = event.data;
+        };
+    </script>
+</body>
+</html>

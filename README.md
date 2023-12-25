@@ -33,7 +33,7 @@ https://gitlab.freedesktop.org/gstreamer <br />
 https://gstreamer.freedesktop.org/download <br />
 https://github.com/centricular/gstcefsrc <br />
 https://github.com/huggingface/diffusers <br />
-https://github.com/huggingface/transformers
+https://github.com/huggingface/transformers <br />
 https://github.com/cumulo-autumn/StreamDiffusion <br />
 
 ### 📦 Model

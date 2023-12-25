@@ -25,7 +25,7 @@ func taskTwitch(clientUsername, channel, oauthToken string, messageChannel chan<
 		var stdoutBuffer bytes.Buffer
     	pythonCmd := fmt.Sprintf("python -c \"import replicate; print(replicate.run('playgroundai/playground-v2-1024px-aesthetic:42fe626e41cc811eaf02c94b892774839268ce1994ea778eba97103fe1ef51b8', input={'prompt': '%s', 'num_inference_steps': 25})[0])\"", text)
 		// pythonCmd := fmt.Sprintf("python -c \"import replicate; print(replicate.run('lucataco/dreamshaper-xl-turbo:0a1710e0187b01a255302738ca0158ff02a22f4638679533e111082f9dd1b615', input={'prompt': '%s', 'num_inference_steps': 5})[0])\"", text)
-		// pythonCmd := fmt.Sprintf("python -c \"import replicate; print(replicate.run('lucataco/sdxl-lcm:fbbd475b1084de80c47c35bfe4ae64b964294aa7e237e6537eed938cfd24903', input={'prompt': '%s', 'num_inference_steps': 4})[0])\"", text)
+		// pythonCmd := fmt.Sprintf("python -c \"import replicate; print(replicate.run('lucataco/sdxl-lcm:fbbd475b1084de80c47c35bfe4ae64b964294aa7e237e6537eed938cfd24903d', input={'prompt': '%s', 'num_inference_steps': 4})[0])\"", text)
 		cmd := exec.Command("sh", "-c", pythonCmd)
 		cmd.Stdout = &stdoutBuffer
 		cmd.Stderr = os.Stderr

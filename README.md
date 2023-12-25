@@ -19,6 +19,7 @@
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/camenduru/inferencebot/blob/main/inferencebot_playground_v2_colab.ipynb) | inferencebot_playground_v2_colab
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/camenduru/inferencebot/blob/main/inferencebot_stream_diffusion_colab.ipynb) | inferencebot_stream_diffusion_colab
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/camenduru/inferencebot/blob/main/inferencebot_sdxl_turbo_colab.ipynb) | inferencebot_sdxl_turbo_colab
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/camenduru/inferencebot/blob/main/inferencebot_mistral_7b_instruct_v0.2_colab.ipynb) | inferencebot_mistral_7b_instruct_v0.2_colab (🚦WIP🚦)
 
 ### 🧬 Code
 https://github.com/golang/go <br />
@@ -36,6 +37,8 @@ https://github.com/cumulo-autumn/StreamDiffusion <br />
 
 ### 🖼 Output
 https://github.com/camenduru/inferencebot/assets/54370274/72ee9ae6-a5c4-4405-916b-c64be449713c
+
+https://github.com/camenduru/inferencebot/assets/54370274/89d1de48-c27a-4554-aec9-8c96451ce4f0
 
 ### 🏢 Sponsor
 https://modelslab.com

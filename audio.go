@@ -1,12 +1,17 @@
 package main
 
 import (
+	"bytes"
 	"fmt"
-  	"os"
-	"os/exec"
 	"io/ioutil"
+	"log"
 	"net/http"
+	"net/url"
+	"os"
+	"os/exec"
 
+	"github.com/faiface/beep/mp3"
+	"github.com/faiface/beep/wav"
 	"github.com/gempir/go-twitch-irc/v3"
 	"github.com/gorilla/websocket"
 )
@@ -21,20 +26,24 @@ func taskTwitch(clientUsername, channel, oauthToken string, messageChannel chan<
 	client := twitch.NewClient(clientUsername, oauthToken)
 	client.OnPrivateMessage(func(message twitch.PrivateMessage) {
 		text := message.Message
-		// client.Say(channel, fmt.Sprintf("/me %s \n", text))
-		pythonCmd := fmt.Sprintf("python -c \"from gradio_client import Client; client = Client('http://127.0.0.1:7860'); result = client.predict('%s', fn_index=0); print(result)\"", text)
+    	var stdoutBuffer bytes.Buffer
+		pythonCmd := fmt.Sprintf("python -c \"from gradio_client import Client; client = Client('http://127.0.0.1:7860', verbose=False); result = client.predict('%s', fn_index=0); print(result)\"", text)
 		cmd := exec.Command("sh", "-c", pythonCmd)
-		cmd.Stdout = os.Stdout
+		cmd.Stdout = &stdoutBuffer
 		cmd.Stderr = os.Stderr
-	
+
 		// Run the command
 		err := cmd.Run()
 		if err != nil {
 			fmt.Println("Error running Python command:", err)
 		}
 
-		messageChannel <- text
+		resultText := stdoutBuffer.String()
+    	GoogleSpeak(resultText, "en")
+		client.Say(channel, fmt.Sprintf("/me %s \n", resultText))
+		messageChannel <- resultText
 	})
+
 	client.Join(channel)
 	err := client.Connect()
 	if err != nil {
@@ -52,12 +61,12 @@ func handleWebSocketConnection(conn *websocket.Conn, messageChannel <-chan strin
 			fmt.Println(err)
 			return
 		}
-		imageData, err := readFile("image.jpg")
+		audioData, err := readFile("out.wav")
 		if err != nil {
 			fmt.Println(err)
 			return
 		}
-		err = conn.WriteMessage(websocket.BinaryMessage, imageData)
+		err = conn.WriteMessage(websocket.BinaryMessage, audioData)
 		if err != nil {
 			fmt.Println(err)
 			return
@@ -67,6 +76,34 @@ func handleWebSocketConnection(conn *websocket.Conn, messageChannel <-chan strin
 
 func readFile(path string) ([]byte, error) {
 	return ioutil.ReadFile(path)
+}
+
+func GoogleSpeak(text, language string) error {
+	url := fmt.Sprintf("http://translate.google.com/translate_tts?ie=UTF-8&total=1&idx=0&textlen=32&client=tw-ob&q=%s&tl=%s", url.QueryEscape(text), language)
+	response, err := http.Get(url)
+	if err != nil {
+		log.Fatal(err)
+		return err
+	}
+	defer response.Body.Close()
+
+	streamer, format, err := mp3.Decode(response.Body)
+	if err != nil {
+		fmt.Println(err)
+		return err
+	}
+	defer streamer.Close()
+
+	file, err := os.Create("out.wav")
+	if err != nil {
+		log.Fatal(err)
+		return err
+	}
+	defer file.Close()
+
+	wav.Encode(file, streamer, format)
+
+	return nil
 }
 
 func main() {

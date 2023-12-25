@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebSocket Image Viewer</title>
+    <style>
+        #messages {
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div id="messages"></div>
+    <script>
+        const socket = new WebSocket("ws://127.0.0.1/ws");
+        socket.binaryType = "arraybuffer";
+
+        socket.onmessage = (event) => {
+            const messagesDiv = document.getElementById("messages");
+
+            if (event.data instanceof ArrayBuffer) {                
+                // Handle audio data
+                const arrayBuffer = event.data;
+                const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+                audioContext.decodeAudioData(arrayBuffer, (buffer) => {
+                    const source = audioContext.createBufferSource();
+                    source.buffer = buffer;
+                    source.connect(audioContext.destination);
+                    source.start();
+                });
+            } else {
+                // Handle text message
+                const newText = event.data;
+                messagesDiv.insertAdjacentHTML('afterbegin', `<p>${newText}</p>`);
+            }
+        };
+    </script>
+</body>
+</html>

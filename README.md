@@ -33,7 +33,15 @@ https://gitlab.freedesktop.org/gstreamer <br />
 https://gstreamer.freedesktop.org/download <br />
 https://github.com/centricular/gstcefsrc <br />
 https://github.com/huggingface/diffusers <br />
+https://github.com/huggingface/transformers
 https://github.com/cumulo-autumn/StreamDiffusion <br />
+
+### 📦 Model
+https://huggingface.co/playgroundai/playground-v2-1024px-aesthetic <br />
+https://huggingface.co/KBlueLeaf/kohaku-v2.1 <br />
+https://huggingface.co/madebyollin/taesd <br />
+https://huggingface.co/stabilityai/sdxl-turbo <br />
+https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.2 <br />
 
 ### 🖼 Output
 https://github.com/camenduru/inferencebot/assets/54370274/72ee9ae6-a5c4-4405-916b-c64be449713c

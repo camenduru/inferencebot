@@ -74,8 +74,8 @@ func main() {
 		}
 		handleWebSocketConnection(conn, messageChannel)
 	})
-	fmt.Println("Server is running on :80")
-	err := http.ListenAndServe(":80", nil)
+	fmt.Println("Server is running on :8080")
+	err := http.ListenAndServe(":8080", nil)
 	if err != nil {
 		fmt.Println(err)
 	}

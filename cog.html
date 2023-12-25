@@ -8,7 +8,7 @@
 <body>
     <center><img id="image"></center>
     <script>
-        const socket = new WebSocket("ws://127.0.0.1/ws");
+        const socket = new WebSocket("ws://127.0.0.1:8080/ws");
         socket.binaryType = "arraybuffer";
 
         socket.onmessage = (event) => {
